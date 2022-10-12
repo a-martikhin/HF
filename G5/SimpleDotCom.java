@@ -11,7 +11,7 @@ public class SimpleDotCom{
         String result = "Мимо";
         for(int cell : locationCells){
             if(guess == cell){
-                result = "Попал";
+				result = "Попал";
                 numOfHits++;
                 break;
             }
