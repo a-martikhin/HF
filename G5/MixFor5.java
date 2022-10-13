@@ -9,7 +9,7 @@ class MixFor5{
                //x = x + 2;
                //x++;
                //x--;
-               //x = x + 0;
+               x = x + 0;
                y = y - 2;
                if(x == 6){
                    break;    
