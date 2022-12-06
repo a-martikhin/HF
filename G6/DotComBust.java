@@ -13,24 +13,24 @@ public class DotComBust{
 		two.setName("eToys.com");
 		DotCom three = new DotCom();
 		three.setName("Go2.com");
-		dotComsList.add(one);
-		dotComsList.add(two);
-		dotComsList.add(three);
+		dotComList.add(one);
+		dotComList.add(two);
+		dotComList.add(three);
 		
-		System.out.println("Ваша цель - потопить три "сайта".");
+		System.out.println("Ваша цель - потопить три сайта.");
 		System.out.println("Pets.com, eToys.com, Go2.com");
 	    System.out.println("Попытайтесь потопить их за минимальное количество ходов");
 		
-		for (DotCom dotComToSet : dotComsList){
-		    ArrayList<String> new Location = helper.placeDotCom(3);
-			dotComToSet.setLocationCells(new Location);
+		for (DotCom dotComToSet : dotComList){
+		    ArrayList<String> newLocation = helper.placeDotCom(3);
+			dotComToSet.setLocationCells(newLocation);
 		} // конец цикла 
 	} // конец метода setUpGame
     
 	private void startPlaying(){
-	    while(!dotComsList.isEmpty()){
+	    while(!dotComList.isEmpty()){
 		    String userGuess = helper.getUserInput("Сделайте ход");
-			checkUserGuess(userGuess)
+			checkUserGuess(userGuess);
 		} //конец while
 		finishGame();
 	} // конец метода startPlaying method
@@ -38,7 +38,7 @@ public class DotComBust{
 	private void checkUserGuess(String userGuess){
 	    numOfGuesses++;
 		String result = "Мимо";
-		for(DotCom dotComToTest : dotComList){
+		for(DotCom dotComTest : dotComList){
 		    result = dotComTest.checkYourself(userGuess);
 			if(result.equals("Попал")){
 			    break;
@@ -62,7 +62,7 @@ public class DotComBust{
 		}
 	} //конец метода
 	
-	private static void main (String[] args){
+	public static void main (String[] args){
 	    DotComBust game = new DotComBust();
 		game.setUpGame();
 		game.startPlaying();
