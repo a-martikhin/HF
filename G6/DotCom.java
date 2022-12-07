@@ -26,7 +26,7 @@ public class DotCom{
 			    result = "Попал";
 			}
         }
-        System.out.println(result);
+        //System.out.println(result);
         return result;
     }
 }
