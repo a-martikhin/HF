@@ -44,6 +44,7 @@ public class DotComBust{
 			    break;
 			}
 			if(result.equals("Потопил")){
+				dotComList.remove(dotComTest);
 			    break;
 			}
 		} // конец for
