@@ -5,7 +5,7 @@ public class MyAnimalList{
     public void add(Animal a){
         if (nextIndex < animals.length){
             animals[nextIndex] = a;
-            System.out.println("Animal добавлен в ячейку " + nextIndex);
+            System.out.println("Animal " + a.getClass() + " добавлен в ячейку " + nextIndex);
             nextIndex++;
         }
     }
